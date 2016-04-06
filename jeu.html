@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="library.js"></script>
+	<script src="app.js"></script>
+
+	<style>
+		body{
+			text-align: center;
+		}
+		form{
+			min-width: 400px;
+			width: 50%;
+			margin: 0 auto;
+		}
+		form p, form input[type="button"]{
+			width: 24%;
+			display:inline-block;
+		}
+		#resultat{
+			margin-top: 5px;
+			color: blue;
+			font-size: 16px;
+		}
+	</style>
+	<!-- Il s'agit de bâtir  un petit jeu
+		Vous disposez de trois fonctions disponibles dans la library.js :
+		_ nombreAleatoire() : retourne un entier entre 1 et 3
+		_ repondre() : récupère le choix du formulaire, le stocke dans la variable reponse et lance la fonction tour(). Vous devez créez cette fonction qui permettra de réalisez un tour.
+		_ resultat(texte) : permet d'afficher une chaine de caractère en-dessous du formulaire.
+
+		Créez un programme. A chaque tour :
+			1) récupérez la réponse de l'utilisateur
+			2) récupérez un nombre aléatoire pour la réponse de l'ordinateur
+			3) déterminez le vainqueur du tour et modifiez les scores en conséquences.
+			4) incrémentez le nombre de tours
+			5) informez l'utilisateur du résultat
+
+		Attention. Gérez un certain nombre de tours et le score ainsi que le résultat final.
+	-->
+</head>
+<body>
+
+	<img src="deco.jpg"/ onclick="jeu();">
+	<form name="formulaire" id="formulaire">
+		<label>Votre choix :</label>
+			<p><input type= "radio" name="reponse" value="pierre" checked> Pierre</p>
+			<p><input type= "radio" name="reponse" value="feuille"> Feuille</p>
+			<p><input type= "radio" name="reponse" value="ciseaux"> Ciseaux</p>
+		<label>nombre de monche :</label>
+		<input type="text" id="nombre"><br><br><br>
+		<input type="button" value="Répondre" onclick="reponse = repondre();">
+	</form>
+	<div id="resultat"></div>
+</body>
+</html>
